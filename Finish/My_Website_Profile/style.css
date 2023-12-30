@@ -1,0 +1,338 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    /* border: 1px solid red; */
+}
+
+body{
+    /* border: 1px solid red; */
+    border-radius: 5px;
+    width: 194vh;
+    height: auto;
+    min-height: 100vh;
+    transition: background-color 0.5s;
+    /* background: url(background_4dimension.jpg) no-repeat;
+    background-size: cover;
+    background-position: center; */
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px ;
+    background: #161A30;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    font-size: 29px;
+    color: #69779B;
+    /* Hide bottom line Logo */
+    text-decoration: none;
+    /*  */
+    font-weight: 700;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+.logo:hover{
+    color: #0ef;
+}
+.navbar{
+    margin-left: 120vh;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+}
+.navbar a{
+    /* border: 1px solid green; */
+    /* position: relative; */
+    display: inline-block;
+    font-size: 20px;
+    color: #69779B;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 20px;
+    /* animation-delay: calc(.2s * var(--i)); */
+}
+.navbar a:hover{
+    color: #0ef;
+    font-weight: 80%;
+
+}
+/* .hidden{  */
+    /* border: 1px solid #fff; 
+    width: 70px;
+    height: 40px;
+    margin-top: 1px;
+    position: absolute;
+    left: 5vh;
+    background: #161A30; */
+    /* transition: all 3s ease; */
+
+/* }  */
+/* .hidden:hover{ */
+    /* border: 1px solid #0ef; 
+    position: absolute;
+    content: ''; 
+    background-color: #161A30;
+    cursor: pointer;
+    width: 70px;
+    height: 40px; */
+    /* display: none;  */
+    /* กำหนดเวลาการเคลื่อนไหว */
+    /* transition: all 2s ease; */
+    /*  */
+    /* left: 13vh; */
+
+/* }   */
+
+
+
+.button{
+    background-color: #69779B;
+    width: 60px;
+    height: 30px;
+    border-radius: 200px;
+    cursor: pointer;
+    position: relative;
+    /* กำหนดเวลาการเคลื่อนไหว */
+    transform: translateX(26px);
+    /*  */
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+}
+.button::before{
+    position: absolute;
+    content: '';
+    background-color: #f0e00b;
+    width: 30px;
+    height: 30px;
+    border-radius: 200px;
+    margin-left: 3px;
+    /* กำหนดเวลาการเคลื่อนไหว */
+    transition: 1s;
+    /*  */
+}
+input:checked + .body{
+    background-color: #000;
+}
+input:checked + .button{
+    background-color: #352d52;
+}
+input:checked + .button::before{
+    transform: translateX(26px);
+    /* swap เปลี่ยนสีปุ่มตรงนี้ */
+    background-color: #fff;
+    /*  */
+}
+input{
+    display: none;
+}
+
+/* วิธีทำให้กลายเป็น Dark Mod */
+.background{
+    /* border: 1px solid green; */
+    width: 220vh;
+    height: 100vh;
+    /* background: url(background_ProFile4.jpg) no-repeat;
+    background-size: cover;
+    background-position: center; */
+    background: #69779B;
+    z-index: -1;
+    position: absolute;
+    transition: 0.5s;
+    margin-top: 110.1vh;
+    margin-left: -30px;
+}
+input:checked + label + .background{
+    /* background: #69779B; */
+    background: url(background_ProFile4.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* ส่วนในข้างล่าง body */
+.home-img .Myprofile{
+    /* border: 1px solid green; */
+    width: 50%;
+    margin-left: 10vh;
+    margin-bottom: 20vh;
+    /* background: url(background_ProFile4.jpg); */
+    border-radius: 300px;
+    background-color: rgb(35, 57, 58);
+    border: 5px solid #0ef;
+    box-shadow: 0 0 20px #0ef;
+    opacity: 0;
+    animation: zoomIn 1s ease forwards;
+    animation-delay: .7s;
+}
+.home-img .Myprofile:hover{
+    border: 5px solid rgb(119, 0, 255);
+    box-shadow: 0 0 20px rgb(119, 0, 255);
+}
+.home-content{
+    max-width: 600px;
+    color: #fff;
+    margin-bottom: 10vh;
+}
+.home-content h3{
+    font-size: 21px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+}
+.home-content h4 span{
+    color: #0ef;
+}
+.home-content h4{
+    font-size: 30px;
+    font-weight: 700;
+    margin: -3px 0;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .7s;
+}
+.home-content h4:nth-of-type(2){
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .7s;
+}
+.home-content h2{
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: .7s;
+}
+.home-content h2 span{
+    color: #0ef;
+}
+.home-content p{
+    font-size: 20px;
+    /* border: 3px solid red; */
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: .7s;
+}
+/* .home-img img{
+    max-width: 450px;
+    margin-right: -20px;
+} */
+.home{
+    /* border: 1px solid rebeccapurple; */
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction:row-reverse;
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: 70px 10% 0;
+}
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    transition: .5 ease;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+.social-media a:hover{
+    background: rgb(119, 0, 255);
+    box-shadow: 0 0 50px rgb(119, 0, 255);
+    border: 2px solid rgb(119, 0, 255);
+    color: #ffffff;
+    
+}
+.btn{
+    display: inline-block;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 40px;
+    /* box-shadow: 0 0 10px #0ef; */
+    font-size: 16px;
+    color: #1f242d;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 1s;
+}
+.btn:hover{
+    background: rgb(119, 0, 255);
+    box-shadow: 0 0 20px rgb(119, 0, 255);
+    color: #ffffff;
+}
+
+/* KEYFRAMES ANIMATION */
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slideTop{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slideBottom{
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slideLeft{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes zoomIn{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}

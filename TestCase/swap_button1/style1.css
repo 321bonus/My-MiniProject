@@ -1,0 +1,66 @@
+/* วิธีFix Webpage */
+*{
+    padding: 0;
+    margin: 0;
+}
+/*  */
+
+.container{
+    width: 100%;
+    height: 100vh;
+    /* background-color: transparent; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button{
+    background-color: #d4d380;
+    width: 200px;
+    height: 100px;
+    border-radius: 200px;
+    cursor: pointer;
+    position: relative;
+    /* กำหนดเวลาการเคลื่อนไหว */
+    transition: 1s;
+    /*  */
+}
+.button::before{
+    position: absolute;
+    content: '';
+    background-color: #f0e00b;
+    width: 90px;
+    height: 90px;
+    border-radius: 200px;
+    margin: 5px;
+    /* กำหนดเวลาการเคลื่อนไหว */
+    transition: 1s;
+    /*  */
+}
+input:checked + body{
+    background-color: #000;
+}
+input:checked + .button{
+    background-color: #352d52;
+}
+input:checked + .button::before{
+    transform: translateX(100px);
+    /* swap เปลี่ยนสีปุ่มตรงนี้ */
+    background-color: #edf1f1;
+    /*  */
+}
+input{
+    display: none;
+}
+
+/* วิธีทำให้กลายเป็น Dark Mod */
+.background{
+    width: 100vw;
+    height: 100vh;
+    background: gray;
+    z-index: -1;
+    position: absolute;
+    transition: 0.3s;
+}
+input:checked + label + .background{
+    background: #242424;
+}
