@@ -15,6 +15,7 @@ body{
     /* background-position: center; */
 }
 
+/* ทำให้พื้นหลังจ่างลง */
 .container{
     position: relative;
     width: 400px;

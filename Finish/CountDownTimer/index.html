@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2023 To 2024</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@1&display=swap');
+    </style>
+</head>
+<body>
+    
+    <!-- <div class="wraper"> -->
+        <!-- <img src="img/logo.png" class="logo"> -->
+    <!-- </div> -->
+    <div class="container">
+        <!-- <img src="img/logo.png" class="logo"> -->
+
+        <div class="content">
+            <p1>Make this year is the best</p1>
+            <h1><span1>HAPPY</span1> <span>NEW YEAR</span></h1>
+            <div class="launch-time">
+                <div>
+                    <p id="days">00</p>
+                    <span>Days</span>
+                </div>
+                <div>
+                    <p id="hours">00</p>
+                    <span>Hours</span>
+                </div>
+                <div>
+                    <p id="minutes">00</p>
+                    <span>Minutes</span>
+                </div>
+                <div>
+                    <p id="seconds">00</p>
+                    <span>Seconds</span>
+                </div>
+            </div>
+            <!-- <button type="button">Learn More <i class='bx bxs-right-arrow'></i></button> -->
+        </div>
+        <div class="start">
+            <h1>start</h1>
+        </div>
+        <div class="end">
+            <h1>end</h1>
+        </div>
+        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe> -->
+        <img src="img/24.png" class="firework" >
+        <img src="img/23.png" class="firework2">
+    </div>
+    <audio id="background-music" loop autoplay>
+        <source src="music/music.mp3" type="audio/mp3">
+        <!-- Add additional source elements for different audio file formats -->
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        var countDownDate = new Date("Jan 1, 2024 00:00:00").getTime();
+        var x = setInterval(function(){
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+
+
+        },1000);
+
+
+    </script>
+
+
+
+</body>
+</html>

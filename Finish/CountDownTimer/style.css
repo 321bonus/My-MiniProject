@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Mono', monospace;
+    box-sizing: border-box;
+}
+
+.wraper{
+    margin: 0;
+    height: 45px;
+    background-color: #352F44;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background: url('img/backgroundwr.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 0 8%;
+    position: relative;
+}
+
+.logo{
+    width: 120px;
+    padding: 20px 0;
+    cursor: pointer;
+}
+
+.content{
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, .2);
+    background: rgba(52.9, 80.8, 92.2, .6);
+    /* background: url(img/wrapper_background.jpg); */
+    background-size: cover;
+    background-position: 21px -0.5vh;
+    backdrop-filter: blur(2px);
+    border-radius: 10px;
+    margin-left: 50vh;
+    margin-top: -5vh;
+    padding: 80px;
+    /* margin-top: 20vh; */
+    /* background: #fff; */
+    
+}
+
+.content p1{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    color: goldenrod;
+    font-size: 25px;
+}
+
+.content h1{
+    font-size: 64px;
+    font-weight: 600;
+}
+
+.content h1 span{
+    color: goldenrod;
+}
+.content h1 span1{
+    color: palevioletred;
+}
+
+.content button{
+    background: transparent;
+    border: 5px solid #fff;
+    outline: none;
+    padding: 12px 25px;
+    color: #fff;
+    /* display: flex;
+    align-items: center; */
+    margin-top: 30px;
+    cursor: pointer;
+    margin-left: 20vh;
+}
+
+.content button i{
+    width: 10px;
+}
+
+/* ทำให้ระยะห่างของช่องเวลาเท่ากัน */
+.launch-time{
+    display: flex;
+    justify-content: center;
+}
+
+.launch-time div{ 
+    flex-basis: 100px;
+    color: rgb(243, 175, 4);
+    font-size: 20px;
+    font-weight: 50px;
+}
+
+.launch-time div p{
+    font-size: 60px;
+    margin-bottom: -14px;
+    color: goldenrod;
+}
+/* ทำให้ระยะห่างของช่องเวลาเท่ากัน */
+.start{
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 50px;
+    left: 155vh;
+    color: goldenrod;
+}
+.end{
+    /* border: 1px solid red; */
+    position: absolute;
+    bottom: 10vh;
+    left: 20vh;
+    color: goldenrod;
+}
+
+/* firework */
+/* ... (Previous CSS code) ... */
+
+.firework{
+    width: 250px;
+    position: absolute;
+    right: 5%;
+    bottom: 0;
+    animation: firework-up 4s linear infinite; /* Use a different animation name */
+}
+
+.firework2{
+    width: 250px;
+    position: absolute;
+    right: 80%;
+    bottom: 0;
+    animation: firework-down 4s linear infinite backwards; /* Reversed animation for down movement */
+}
+
+@keyframes firework-up {
+    0% {
+        bottom: 0;
+        opacity: 3;
+    }
+    100% {
+        bottom: 70%;
+        opacity: 0;
+    }
+}
+
+@keyframes firework-down {
+    0% {
+        bottom: 70%;
+        opacity: 2;
+    }
+    100% {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
