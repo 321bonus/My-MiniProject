@@ -390,6 +390,19 @@ header .song_side{
     z-index: 2;
 }
 
+ /* 52:54นาที */
+header .song_side::before{
+    content: '';
+    position: absolute;
+    width: 90%;
+    height: 100vh;
+    margin-top: -15vh;
+    background: url('img_profile/bampro1-removebg-preview.png') no-repeat;
+    z-index: -1;
+    left: 82vh;
+    top: 5vh;
+}
+
 header .song_side nav{
     width: 90%;
     height: 10%;
@@ -435,16 +448,19 @@ header .song_side nav ul li span{
 /* ช่องค้นหา */
 header .song_side nav .search{
     position: relative;
-    width: 40%;
-    padding: 1px 10px;
+    width: 330px;
+    padding: 4px 60px;
     border-radius: 20px;
     color: gray;
+    left: 28vh;
+    bottom: 5px;
+    /* border: 1px solid red; */
 }
 
 header .song_side nav .search::before{
     content: '';
     position: absolute;
-    width: 100%;
+    width: 70%;
     height: 100%;
     border-radius: 20px;
     background: rgb(184, 184, 184,.1);
@@ -452,18 +468,25 @@ header .song_side nav .search::before{
     z-index: -1;
 }
 
-header .song_side nav .search .bi{
-    font-size: 13px;
-    padding: 3px 0px 0px 10px;
+header .song_side nav .search .bx{
+    font-size: 17px;
+    padding: 2px 0px 0px 10px;
+    position: relative;
+    top: 6px;
+    left: 4px;
+    /* border: 1px solid red; */
 }
 
 header .song_side nav .search input{
     background: none;
     outline: none;
     border: none;
-    padding: 0px 10px;
+    padding: 2px 2px;
     color: #fff;
-    font-size: 12px;
+    font-size: 13px;
+    /* border: 1px solid red; */
+    position: relative;
+    top: 3px;
 }
 
 /* Profile */
@@ -520,10 +543,37 @@ header .song_side .content p{
 }
 
 header .song_side .content .buttons{
-    font-size: 11px;
-    font-weight: 400;
-    color: #4c5262;
-    margin: 5px;
+    margin-top: 15px;
+}
+
+header .song_side .content .buttons button{
+    width: 130px;
+    height: 30px;
+    border: 2px solid #36e2ed;
+    outline: none;
+    border-radius: 20px;
+    background: #5adae0;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s linear;
+}
+
+header .song_side .content .buttons button:hover{
+    border: 2px solid #36e2ec;
+    background: none;
+    color: #36e2ec;
+}
+
+header .song_side .content .buttons button:nth-child(2){
+    border: 2px solid #36e2ec;
+    background: none;
+    color: #36e2ec;
+}
+
+header .song_side .content .buttons button:nth-child(2):hover{
+    border: 2px solid #36e2ec;
+    background: #36e2ec;
+    color: #fff;
 }
 
 /* ถึงนาที่ 43:01  */
